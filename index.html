@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Lab 7 - Basic JavaScript Event Handling and DOM</title>
-	<style type="text/css">
-		.center {
-			text-align: center;
-		}
-		#container {
-			width: 400px;
-			margin: 50px auto 0;
-		}
-		#entryinput {
-			width: 100%;
-		}
-		#entrybutton {
-			width: 200px;
-			text-align: center;
-			color: #fff;
-			background-color: #c00;
-			padding: 2em 0;
-			margin: 20px auto;
-			font-size: 24px;
-			font-weight: bold;
-		}
-	</style>
-</head>
-<body>
-	<h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
-	<h2 class="center" id="put-your-name-here">Your Name Here</h2>
-	<h3 class="center" id="put-your-email-here">Your IIT email here</h3>
-	<div id="container">
-		<input id="entryinput" type="text" name="textentry" placeholder="Enter a Message"/>
-		<div id="entrybutton">Alert Me</div>
-		<h2 id="textoutput" class="center">Show results here</h2>
-	</div>
-	
-	<script type="text/javascript">
-		document.getElementById("entrybutton").onclick = function() {myFunction()};
-		var userinput = document.getElementById("entryinput").innerHTML;
-		function myFunction() {
-				
-				document.getElementById("put-your-name-here").innerHTML = "Gregory Scott Sr.";
-				document.getElementById("put-your-email-here").innerHTML = "Gscott3@hawkmail.edu";
-				userinput = document.getElementById("entryinput").innerHTML;
-				document.getElementById("textoutput").innerHTML = userinput;
-		}	
-		
-	</script>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 7 - Basic JavaScript Event Handling and DOM</title>
+		<style type="text/css">
+			.center {
+				text-align: center;
+			}
+			#container {
+				width: 400px;
+				margin: 50px auto 0;
+			}
+			#entryinput {
+				width: 100%;
+			}
+			#entrybutton {
+				width: 200px;
+				text-align: center;
+				color: #fff;
+				background-color: #c00;
+				padding: 2em 0;
+				margin: 20px auto;
+				font-size: 24px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
+		<h2 class="center" id="put-your-name-here">Your Name Here</h2>
+		<h3 class="center" id="put-your-email-here">Your IIT email here</h3>
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-</body>
+		<div id="container">
+			<input id="entryinput" type="text" name="textentry" placeholder="Enter a Message"/>
+			<div id="entrybutton">Alert Me</div>
+			<h2 id="textoutput" class="center">Show results here</h2>
+		</div>
+		
+		<script type="text/javascript">
+			document.getElementById("entrybutton").onclick = function() {myFunction()};
+			
+			function myFunction() {
+					var userinput = " ";
+					document.getElementById("put-your-name-here").innerHTML = "Gregory Scott Sr.";
+					document.getElementById("put-your-email-here").innerHTML = "Gscott3@hawkmail.edu";
+					userinput = document.getElementById("entryinput");
+					alert("Gregory Scott Sr: " + userinput.value);
+					document.getElementById("textoutput").innerHTML = userinput.value;
+			}			
+		</script>
+		
+	</body>
 </html>
